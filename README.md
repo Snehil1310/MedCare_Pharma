@@ -1,65 +1,108 @@
-# MedCare Pharma: AI Supply Chain Control Tower
+# 🏥 MedCare Pharma
 
-![MedCare Pharma](https://img.shields.io/badge/Status-Active-success) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) ![TanStack](https://img.shields.io/badge/TanStack%20Start-FF4154?style=flat&logo=react&logoColor=white)
+<div align="center">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/TanStack_Start-FF4154?style=for-the-badge&logo=react&logoColor=white" alt="TanStack Start" />
+</div>
 
-MedCare Pharma is a unified AI Supply Chain platform encompassing two major solutions: **P1 Demand Sensing & Replenishment** and **PR2 Autonomous Procure-to-Pay**. 
+<br />
 
-The Control Tower integrates all modules into one connected ecosystem, bridging the gap between demand forecasting and automated procurement.
+**MedCare Pharma** is a next-generation AI-driven Supply Chain Control Tower designed to unify demand sensing, smart allocation, and autonomous procurement. By bridging the gap between proactive demand forecasting and reactive purchasing, MedCare Pharma ensures an optimized, resilient, and waste-free supply chain ecosystem for healthcare organizations.
 
 ---
 
-## 🌟 Core Modules
+## 🎯 Vision & Capabilities
 
-### 1. P1 — Demand Sensing & Smart Allocation
-- **Demand Intelligence:** AI-driven forecasting overriding historical trends by capturing signals (e.g., flu season, promotions) to actively predict stock requirements.
-- **Expiry-Aware Allocation:** Automatically detect near-expiry batches across Distribution Centers (DCs) and suggest transfers to high-demand regions, actively preventing financial waste and stock-outs.
-- **Replenishment Planning:** Autonomous safety stock calculation integrating demand forecasts and supplier lead times.
+The platform operates as a unified command center, integrating two major solutions into one connected ecosystem:
 
-### 2. PR2 — Autonomous Procure-to-Pay (P2P)
-- **Smart Sourcing:** Conversational UI to quickly raise material requisitions. AI compares suppliers based on reliability, lead time, and price.
-- **Autonomous PO Generation:** Rule-based purchase orders automatically sent to vendors.
-- **3-Way Match & Goods Receipt:** Simulates IoT/CV goods-receipt integration against OCR-extracted invoices to enable touchless payments and instant exception flagging.
+### 🧠 P1: Demand Sensing & Smart Allocation
+- **AI-Powered Demand Intelligence:** Goes beyond historical trends by capturing and acting on real-world signals (e.g., flu seasons, promotional events) to accurately predict regional stock requirements.
+- **Expiry-Aware Allocation:** Proactively identifies near-expiry pharmaceutical batches across Distribution Centers (DCs). It autonomously suggests inter-DC transfers to high-demand regions, actively mitigating financial waste and preventing localized stock-outs.
+- **Dynamic Replenishment Planning:** Continuously recalculates safety stocks by integrating real-time demand forecasts with supplier lead times.
 
-### 3. Unified AI Command Center
-A centralized hub bringing all alerts into one actionable interface. Supply chain teams can execute complex, multi-step actions (e.g., Transfer Stock -> Generate PO -> Change Supplier) autonomously in a single click, or escalate appropriately based on alert severity.
+### ⚡ PR2: Autonomous Procure-to-Pay (P2P)
+- **Smart Sourcing:** Features an intuitive conversational UI for raising material requisitions. The AI evaluates and ranks suppliers based on historical reliability, lead times, and current pricing.
+- **Automated PO Generation:** Utilizes robust rule-based engines to automatically generate and dispatch purchase orders to vendors, reducing manual intervention.
+- **Touchless 3-Way Match & Goods Receipt:** Simulates IoT/Computer Vision integration for goods receipt against OCR-extracted vendor invoices. This enables touchless payments and instant flagging of discrepancies (e.g., quantity mismatches, price variations).
+
+### 🎛️ Unified AI Command Center
+A centralized hub bringing all supply chain alerts into a single, actionable interface. Supply chain operators can execute complex, multi-step actions autonomously—such as `Transfer Stock -> Generate PO -> Change Supplier`—in a single click, or escalate critical alerts based on severity.
 
 ---
 
 ## 🚀 Tech Stack
 
-- **Framework:** [TanStack Start](https://tanstack.com/start/latest) (React)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Data Fetching:** [TanStack Query](https://tanstack.com/query)
-- **Database:** SQLite via [`better-sqlite3`](https://github.com/WiseLibs/better-sqlite3) (Zero-config local database seeded on startup)
-- **Icons:** [Lucide React](https://lucide.dev/)
+MedCare Pharma leverages modern, high-performance web technologies:
+
+- **Framework:** [TanStack Start](https://tanstack.com/start/latest) (React 19)
+- **Language:** TypeScript
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) & [shadcn/ui](https://ui.shadcn.com/)
+- **State Management & Data Fetching:** [TanStack Query](https://tanstack.com/query)
+- **Routing:** [TanStack Router](https://tanstack.com/router)
+- **Database:** Local Zero-Config Database (seeded on startup via `better-sqlite3`)
+- **Icons & Visualization:** [Lucide React](https://lucide.dev/) & [Recharts](https://recharts.org/)
 
 ---
 
-## 🛠️ Quick Start
+## 🛠️ Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-- Node.js (v18+)
+
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/en/) (v18.0.0 or higher)
+- [npm](https://www.npmjs.com/) (v9.0.0 or higher)
 
 ### Installation
-Clone the repository and install dependencies:
 
-```bash
-git clone <your-github-repo-url>
-cd medcare-pharma
-npm install
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Snehil1310/MedCare_Pharma.git
+   cd MedCare_Pharma
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the application:**
+   Open your browser and navigate to `http://localhost:3000`. The local database will automatically initialize and seed itself on startup in the `data/` directory.
+
+---
+
+## 🏗️ Project Structure
+
 ```
-
-### Running Locally
-To run the development server:
-
-```bash
-npm run dev
+MedCare_Pharma/
+├── data/               # Local SQLite database and seed files
+├── public/             # Static assets
+├── src/                
+│   ├── components/     # Reusable UI components (shadcn/ui)
+│   ├── db/             # Database schemas and connection logic
+│   ├── hooks/          # Custom React hooks
+│   ├── lib/            # Utility functions and shared logic
+│   ├── routes/         # TanStack Router route definitions
+│   └── server-fns/     # Backend server functions/API endpoints
+├── package.json        # Dependencies and scripts
+└── vite.config.ts      # Vite configuration
 ```
-
-The app will instantly be available at `http://localhost:3000`. 
-*(Note: The database automatically initializes and seeds itself on startup in the `data/` folder).*
 
 ---
 
 ## 🛡️ License
-Proprietary — MedCare Pharma.
+
+Proprietary — **MedCare Pharma**. All rights reserved.
+
+<div align="center">
+  <sub>Built with ❤️ for a smarter, healthier supply chain.</sub>
+</div>
